@@ -4,27 +4,32 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> </title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style.css">		
+		<link rel="stylesheet" href="vendor/normalize.css" media="screen">		
+		<link rel="stylesheet" href="vendor/flickity.min.css" media="screen">			
+		<link rel="stylesheet" type="text/css" href="css/style.css">		
 	</head>	
 	<body>
-		<header>			
+		<header>
+				<h1>Flickity - autoPlay</h1>
+				<!-- Flickity HTML init -->
+				<div class="carousel" data-flickity='{ "autoPlay": true }'>
+					<!-- <div class="carousel-cell"><img src="https://images.pexels.com/photos/1081673/pexels-photo-1081673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div> -->
+					<div class="carousel-cell"></div>
+					<div class="carousel-cell"></div>
+					<div class="carousel-cell"></div>
+					<div class="carousel-cell"></div>
+					<div class="carousel-cell"></div>
+				</div>	
 		</header>		
+		
+		
 		<main>	
-			<!-- HTML5 tag with our class, for example features, about, jumbotron -->
-			<section class="about">
-			<div class="container">
-				<!-- clearfix - row must be the parent of the columns! -->
-				<div class="row">
-					<div class="col-6"></div>
-					<div class="col-6"></div>
-				</div>
-			</div>
-			</section>
+			
+
 		</main>				
 		<footer>		
 		</footer>	
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="vendor/flickity.pkgd.min.js"></script>
+		<script src="js/script.js"></script>				
 	</body>	
 </html>
