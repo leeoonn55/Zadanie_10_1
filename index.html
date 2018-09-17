@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> </title>
-		<link rel="stylesheet" href="vendor/normalize.css" media="screen">		
-		<link rel="stylesheet" href="vendor/flickity.min.css" media="screen">			
-		<link rel="stylesheet" type="text/css" href="css/style.css">		
-	</head>	
-	<body>
-		<header>
-				<!-- <h1>Flickity - autoPlay</h1> -->
 
-				<div class="button-group">
-					<button class="button">Reset</button>
-					<!-- <button class="button">2</button>
-					<button class="button">3</button>
-					<button class="button">4</button>
-					<button class="button">5</button> -->
-				  </div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> </title>
+	<link rel="stylesheet" href="vendor/normalize.css" media="screen">
+	<link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 
-				<!-- Flickity HTML init -->
-				<div class="carousel main-carousel" data-flickity='{ "autoPlay": true }'>					
-					<div class="carousel-cell" style="background-image: url(images/foto_01.jpg)">
-						<div class="container" >Tekst 1</div>
-					</div>
-					<div class="carousel-cell " style="background-image: url(images/foto_02.jpg)">
-						<div class="container">Tekst 2</div>
-					</div>
-					<div class="carousel-cell" style="background-image: url(images/foto_03.jpg)">
-						<div class="container">Tekst 3</div>
-					</div>
-					<div class="carousel-cell" style="background-image: url(images/foto_04.jpg)">
-						<div class="container">Tekst 4</div>
-					</div>
-					<div class="carousel-cell" style="background-image: url(images/foto_05.jpg)">
-						<div class="container">Tekst 5</div>
-					</div>
-				</div>	
-		</header>			
-		<main>	
-			
-		</main>				
-		<footer>		
-		</footer>	
-		<script src="vendor/flickity.pkgd.min.js"></script>
-		<script src="js/script.js"></script>				
-	</body>	
+<body>
+	<header>
+		<div class="button-group">
+			<button class="button">Restart</button>
+		</div>
+		<!-- Flickity HTML init -->
+		<div class="carousel main-carousel">
+			<div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/foto_01.jpg)">
+				<div class="container">Tekst 1</div>
+			</div>
+			<div class="carousel-cell" id="carousel-cell2" style="background-image: url(images/foto_02.jpg)">
+				<div class="container">Tekst 2</div>
+			</div>
+			<div class="carousel-cell" id="carousel-cell3" style="background-image: url(images/foto_03.jpg)">
+				<div class="container">Tekst 3</div>
+			</div>
+			<div class="carousel-cell" id="carousel-cell4" style="background-image: url(images/foto_04.jpg)">
+				<div class="container">Tekst 4</div>
+			</div>
+			<div class="carousel-cell" id="carousel-cell5" style="background-image: url(images/foto_05.jpg)">
+				<div class="container">Tekst 5</div>
+			</div>
+		</div>
+	</header>
+	<main>
+
+	</main>
+	<footer>
+	</footer>
+	<script src="vendor/flickity.pkgd.min.js"></script>
+	<script src="vendor/hash.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
 </html>

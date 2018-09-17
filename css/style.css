@@ -37,6 +37,8 @@ body {
 }
 
 .button-group {
+  position: absolute;
+  z-index: 1;
   margin: 20px 20px;
 }
 /*# sourceMappingURL=style.css.map */
