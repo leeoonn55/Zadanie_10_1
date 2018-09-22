@@ -15,96 +15,49 @@
 		<div class="button-group">
 			<button class="button">Restart</button>
 		</div>
-		
-		<!-- Flickity HTML init -->
-		<!-- <div class="carousel main-carousel">
-			<div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/foto_01.jpg)">
-				<div class="container">Tekst 1</div>
-			</div>
-			<div class="carousel-cell" id="carousel-cell2" style="background-image: url(images/foto_02.jpg)">
-				<div class="container">Tekst 2</div>
-			</div>
-			<div class="carousel-cell" id="carousel-cell3" style="background-image: url(images/foto_03.jpg)">
-				<div class="container">Tekst 3</div>
-			</div>
-			<div class="carousel-cell" id="carousel-cell4" style="background-image: url(images/foto_04.jpg)">
-				<div class="container">Tekst 4</div>
-			</div>
-			<div class="carousel-cell" id="carousel-cell5" style="background-image: url(images/foto_05.jpg)">
-				<div class="container">Tekst 5</div>
-			</div>
-		</div> -->
+		<div id="page-wrapper" class="container">
+			<div id="results"></div>
+		</div>
 
-		<div id="page-wrapper" class="container">				
-				<div class="carousel main-carousel">
-						<div id="results"></div>
-				</div>	
-			
-			</div>
-
-		
-
-
-		
-			
-		
-			
-			<script id="template-product-list" type="x-tmpl-mustache">
+		<script id="template-product-list" type="x-tmpl-mustache">
 					<div class="carousel main-carousel">						
-					<div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/foto_01.jpg)"></div>
+					{{{products}}}
 					</div>
-
 			</script>
-			
-			<script id="template-product-item" type="x-tmpl-mustache">
-					<div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/foto_02.jpg)"></div>
+
+		<script id="template-product-item" type="x-tmpl-mustache">
+					<div class="carousel-cell" id="carousel-cell1" style="background-image: url({{image}})"></div>
 			</script>
-			
-			
-			
-			
-		
-			
-			
-			
-
-
 	</header>
 	<main>
-
-
-
-
-
 	</main>
 	<footer>
 	</footer>
+
 	<script>
-			var productsData = [
-				{
-					name: 'images/foto_01.jpg', 
-					price: '$10'
-				},
-				{
-					name: 'images/foto_02.jpg', 
-					price: '$8'
-				},
-				{
-					name: 'images/foto_03.jpg', 
-					price: '$12'
-				}
-			];
-			</script>
-	
-	
+		var productsData = [
+			{
+				image: 'images/foto_01.jpg',
+			},
+			{
+				image: 'images/foto_02.jpg',
+			},
+			{
+				image: 'images/foto_03.jpg',
+			},
+			{
+				image: 'images/foto_04.jpg',
+			},
+			{
+				image: 'images/foto_05.jpg',
+			}
+		];
+	</script>
+
 	<script src="vendor/flickity.pkgd.min.js"></script>
 	<script src="vendor/hash.js"></script>
-
 	<script src="vendor/mustache.js"></script>
-	<script src="js/script1.js"></script>
-	
-	
-
+	<script src="js/script1.js"></script>  <!-- skrypt dla mustache -->
 	<script src="js/script.js"></script>
 </body>
 
