@@ -12,7 +12,7 @@
 
 	// Następnie zoptymalizujemy drugą z nich, ponieważ tylko ona będzie wykonywana wielokrotnie. 	
 	Mustache.parse(templateItem);
-	// Mustache.parse(fullProductList); // jednak ta linijka nie była potrzebna :-)
+	 Mustache.parse(fullProductList); // jednak ta linijka nie była potrzebna :-)
 
 	// kod HTML wszystkich slajdów. 	
 	var listItems = '';
