@@ -43,9 +43,8 @@ body {
 }
 
 #map {
-  height: 400px;
-  /* The height is 400 pixels */
-  /* The width is the width of the web page */
+  height: 50vh;
+  min-height: 250px;
   width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
