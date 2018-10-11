@@ -54,16 +54,26 @@
 
     // pętla ustawiająca punkty na mapie
     for (var i = 0; i < urll.length; i++) {
-      var markerOne = new google.maps.Marker({
-        position: urll[i],
-        map: map
-      });
+      // var markerOne = new google.maps.Marker({
+      //   position: urll[i],
+      //   map: map
+      // });
 
-      markerOne.addListener('click', function () {
-        flkty.select(i);
+     
+      google.maps.event.addListener(marker, 'click', (function (marker, i) { //nowy kod
+				return function () {
+          console.log(marker, i);
+          flkty.select(i);
+				}
+			})(marker, i));
+
+     
+      // markerOne.addListener('click', function () {  //stary kod
+      //   flkty.select(i);
+       
         // Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
         // infos.innerHTML = 'You clicked markerOne' + markerOne;
-      });
+      // });
     };
   }
 })();
