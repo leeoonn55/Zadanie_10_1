@@ -44,7 +44,6 @@
       { lat: 50.172091, lng: 18.9022362 }
     ];
 
-
     // Ustawienie punktu centralnego
     var map = new google.maps.Map(
       document.getElementById('map'), {
@@ -54,25 +53,22 @@
 
     // pętla ustawiająca punkty na mapie
     for (var i = 0; i < urll.length; i++) {
-      // var markerOne = new google.maps.Marker({
-      //   position: urll[i],
-      //   map: map
-      // });
+      var markerOne = new google.maps.Marker({
+        position: urll[i],
+        map: map
+      });
 
-     
-      google.maps.event.addListener(marker, 'click', (function (marker, i) { //nowy kod
-				return function () {
+      //nowy kod --> nie pojawiają się markery
+      google.maps.event.addListener(marker, 'click', (function (marker, i) { 
+      	return function () {
           console.log(marker, i);
           flkty.select(i);
-				}
-			})(marker, i));
+      	}
+      })(marker, i));
 
-     
-      // markerOne.addListener('click', function () {  //stary kod
+      //stary kod --> markerty się pojawiają ale nie da się klikać ?
+      // markerOne.addListener('click', function () {
       //   flkty.select(i);
-       
-        // Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
-        // infos.innerHTML = 'You clicked markerOne' + markerOne;
       // });
     };
   }
