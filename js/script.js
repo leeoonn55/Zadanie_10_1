@@ -36,7 +36,7 @@
 (function () {
   window.initMap = function () {
     // Znaczniki na maopie
-    var urll = [
+    var marker = [
       { lat: 50.1974535, lng: 18.9826401 },
       { lat: 50.2015379, lng: 18.9910042 },
       { lat: 50.1934108, lng: 18.987402 },
@@ -48,17 +48,17 @@
     var map = new google.maps.Map(
       document.getElementById('map'), {
         zoom: 12,
-        center: urll[1]
+        center: marker[1]
       });
 
     // pętla ustawiająca punkty na mapie
-    for (var i = 0; i < urll.length; i++) {
+    for (var i = 0; i < marker.length; i++) {
       var markerOne = new google.maps.Marker({
-        position: urll[i],
+        position: marker[i],
         map: map
       });
 
-      //nowy kod --> nie pojawiają się markery
+      
       google.maps.event.addListener(marker, 'click', (function (marker, i) { 
       	return function () {
           console.log(marker, i);
@@ -66,24 +66,16 @@
       	}
       })(marker, i));
 
-      //stary kod --> markerty się pojawiają ale nie da się klikać ?
-      // markerOne.addListener('click', function () {
-      //   flkty.select(i);
-      // });
     };
   }
 })();
-
-
-
-
 
 // Carusel *****************************************************************
 var elem = document.querySelector('.main-carousel');
 
 var flkty = new Flickity(elem, {
   // options  
-  autoPlay: false,
+  autoPlay: 2000,
   freeScroll: true,
   pageDots: false,
   cellAlign: 'left',
